@@ -1,5 +1,5 @@
-flask
 gunicorn
+flask
 numpy
 xgboost
 scikit-learn
