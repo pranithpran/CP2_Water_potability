@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Potability Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            color: #00c6ff;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00c6ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #007bff;
+            transform: scale(1.1);
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Check Your Water Potability</h1>
+    <form action="/predict" method="post">
+        <label>pH: <input type="number" name="ph" required></label>
+        <label>Hardness: <input type="number" name="Hardness" required></label>
+        <label>Solids: <input type="number" name="Solids" required></label>
+        <label>Chloramines: <input type="number" name="Chloramines" required></label>
+        <label>Sulfate: <input type="number" name="Sulfate" required></label>
+        <label>Conductivity: <input type="number" name="Conductivity" required></label>
+        <label>Organic Carbon: <input type="number" name="Organic_carbon" required></label>
+        <label>Trihalomethanes: <input type="number" name="Trihalomethanes" required></label>
+        <label>Turbidity: <input type="number" name="Turbidity" required></label>
+        <button type="submit">Check Water Quality</button>
+    </form>
+
+    {% if prediction is not none %}
+        <div class="result">
+            {% if prediction == 1 %}
+                ✅ Water is **safe** for drinking.
+            {% else %}
+                ❌ Water is **not safe** for drinking.
+            {% endif %}
+        </div>
+    {% endif %}
+
+</body>
+</html>

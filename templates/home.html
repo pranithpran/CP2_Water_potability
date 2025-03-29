@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality & Health</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            color: #00c6ff;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            width: 80%;
+            margin: auto;
+            line-height: 1.6;
+        }
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #00c6ff;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #007bff;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Importance of Water Quality</h1>
+    <p>Water quality is essential for maintaining good health. Poor water quality can lead to diseases such as cholera, diarrhea, and other waterborne illnesses.</p>
+    <p>Ensuring safe drinking water reduces health risks and improves overall well-being.</p>
+    
+    <button onclick="location.href='/predict'">Check Water Potability</button>
+</body>
+</html>
