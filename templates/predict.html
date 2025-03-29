@@ -65,15 +65,15 @@
 
     <h1>Check Your Water Potability</h1>
     <form action="/predict" method="post">
-        <label>pH: <input type="number" name="ph" required></label>
-        <label>Hardness: <input type="number" name="Hardness" required></label>
-        <label>Solids: <input type="number" name="Solids" required></label>
-        <label>Chloramines: <input type="number" name="Chloramines" required></label>
-        <label>Sulfate: <input type="number" name="Sulfate" required></label>
-        <label>Conductivity: <input type="number" name="Conductivity" required></label>
-        <label>Organic Carbon: <input type="number" name="Organic_carbon" required></label>
-        <label>Trihalomethanes: <input type="number" name="Trihalomethanes" required></label>
-        <label>Turbidity: <input type="number" name="Turbidity" required></label>
+        <label>pH: <input type="number" name="ph" required>(Safe: 6.5 - 8.5)</label>
+        <label>Hardness: <input type="number" name="Hardness" required>(Safe: 50 - 300 mg/L)</label>
+        <label>Solids: <input type="number" name="Solids" required>(Safe: < 500 mg/L)</label>
+        <label>Chloramines: <input type="number" name="Chloramines" required>(Safe: < 4 mg/L)</label>
+        <label>Sulfate: <input type="number" name="Sulfate" required>(Safe: < 250 mg/L)</label>
+        <label>Conductivity: <input type="number" name="Conductivity" required>(Safe: < 1000 µS/cm)</label>
+        <label>Organic Carbon: <input type="number" name="Organic_carbon" required>(Safe: < 5 mg/L)</label>
+        <label>Trihalomethanes: <input type="number" name="Trihalomethanes" required>(Safe: < 80 µg/L)</label>
+        <label>Turbidity: <input type="number" name="Turbidity" required>(Safe: < 1 NTU)</label>
         <button type="submit">Check Water Quality</button>
     </form>
 
